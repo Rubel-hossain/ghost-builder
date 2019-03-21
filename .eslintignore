@@ -1,0 +1,4 @@
+# ignore src external js folders
+/node_modules
+/src/js/modules
+/src/js

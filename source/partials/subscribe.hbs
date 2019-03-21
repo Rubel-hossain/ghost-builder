@@ -1,0 +1,8 @@
+{{#if @labs.subscribers}}
+{{subscribe_form placeholder="t {{Your Email}}" button_class="buttonfx curtainup"}}
+{{else}}
+<form action="#" class="subscribe-form mailchimp_subscribe" method="post">
+<input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL" placeholder="Your Email Here">
+<button type="submit" name="subscribe" id="mc-embedded-subscribe"  class="buttonfx curtainup">{{t "Subscribe"}}</button>
+</form>
+{{/if}}

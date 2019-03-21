@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{!-- Title --}}
+    <title>{{meta_title}}</title>
+    {{!-- Bootstrap CSS --}}
+    <link rel="stylesheet" href="{{asset 'assets/css/bootstrap.min.css'}}">
+    {{!--Owlcarousel CSS --}}
+    <link rel="stylesheet" href="{{asset 'assets/css/owl.carousel.min.css'}}">
+    {{!-- Font awesome CSS --}}
+    <link rel="stylesheet" href="{{asset 'assets/css/fontawesome-all.min.css'}}">
+    {{!-- Animate CSS --}}
+    <link rel="stylesheet" href="{{asset 'assets/css/animate.css'}}">
+    {{!-- Syntax Heighlighter --}}
+    <link rel="stylesheet" href="{{asset 'assets/css/a11y-light.css'}}">
+    {{!-- Main CSS --}}
+    <link rel="stylesheet" href="{{asset 'assets/css/style.css'}}">
+    {{!-- Google font --}}
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,600i,700" rel="stylesheet">
+    {{ghost_head}}
+</head>
+
+  <body class="home-dark {{ghost_body}}">
+    {{> "header"}}
+
+        {{{body}}}
+
+    {{> "footer"}}
+    <div class="preloader" id="preloader">
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <script src="{{asset 'assets/js/jquery-3.3.1.min.js'}}"></script>
+    {{!-- easing efect JS --}}
+    <script src="{{asset 'assets/js/easing-efect.js'}}"></script>
+    {{!-- owlcarousel  JS --}}
+    <script src="{{asset 'assets/js/owl.carousel.min.js'}}"></script>
+    {{!-- Bootstrap JS --}}
+    <script src="{{asset 'assets/js/bootstrap.min.js'}}"></script>
+    {{!-- waypoints JS --}}
+    <script src="{{asset 'assets/js/jquery.waypoints.min.js'}}"></script>
+    {{!-- Responsive Menu --}}
+    <script src="{{asset 'assets/js/menumaker.min.js'}}"></script>
+    {{!-- highlight JS --}}
+    <script src="{{asset 'assets/js/highlight.pack.js'}}"></script>
+    {{!-- Animated Modal --}}
+    <script src="{{asset 'assets/js/animatedModal.min.js'}}"></script>
+    {{!-- wow JS --}}
+    <script src="{{asset 'assets/js/wow.min.js'}}"></script>
+    {{!-- Ghost Search --}}
+    <script src="{{asset 'assets/js/ghost-search.min.js'}}"></script>
+    <script src="https://unpkg.com/@tryghost/content-api@1.0.0/umd/content-api.min.js"></script>
+
+    {{!-- main  JS --}}
+    <script src="{{asset 'assets/js/main.js'}}"></script>
+    {{ghost_foot}}
+</body>
+
+</html>

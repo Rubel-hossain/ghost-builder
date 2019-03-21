@@ -1,0 +1,14 @@
+{{#get "posts" limit="4" filter="featured:false" include="tags,authors"}}
+  {{#foreach posts}}
+    <div class="row d-md-flex wow fadeIn mb-50" data-wow-duration=".6s">
+        <div class="col-lg-6">
+          {{> "post_thumb"}}
+        </div>
+        <div class="col-lg-6">
+           {{> "post_details"}}
+        </div>
+    </div>
+ {{/foreach}}
+{{/get}}
+
+

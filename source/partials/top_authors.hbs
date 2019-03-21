@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="author-title pb-3">
+            <h3>Top Author</h3>
+        </div>
+    </div>
+</div>
+<div class="row">  
+      {{#get "authors" limit="6" include="count.posts"}}
+        {{#foreach authors}}
+        <div class="col-lg-6">
+            <div class="author-block d-md-flex">
+                {{#if cover_image}}
+                <div class="author-pic">
+                    <a href="{{url}}"><img src="{{img_url cover_image}}" alt="{{name}}"/></a>
+                </div>
+                {{/if}}
+                <div class="right-text">
+                <div class="author-name"><a href="{{url}}">{{name}}</a><span> {{plural count.posts empty=(t "No posts") singular=(t "% post") plural=(t "% posts")}}</span></div>
+                    <p>{{bio}}</p>
+                    <div class="btn-author"><a href="{{url}}">{{t "View all post"}}</a></div>
+                </div>
+            </div>
+        </div>
+        {{/foreach}}
+      {{/get}}
+</div>

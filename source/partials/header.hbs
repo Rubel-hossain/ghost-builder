@@ -1,0 +1,46 @@
+<!-- ======================== START HEADER AREA HERE ====================================== -->
+<header class="themeix-header clearfix mb-5">
+    <div class="themeix-header-navigation">
+        <div class="container">
+            <div class="row">
+            	<div class="col-2">
+                    <div class="themeix-logo">
+                        <a class="themeix-brand" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}"></a>
+                    </div>
+            	  </div>
+                <div class="col-10">
+				           <nav id="themeix-menu">
+                      {{navigation}}
+					        </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div id="searchModal">
+<!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+<div class="container-fluid">
+    <div class="row text-right">
+      <div  id="btn-close-modal" class="close-searchModal"> 
+        <a href="#"><i class="fa fa-times"></i></a>
+      </div> 
+    </div>
+</div>
+
+<div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                <div class="modal-content">
+                    <form action="" class="mb-0">
+                        <input type="text" name="search-input" id="ghost-search-field" class="form-control fearch-input p-4" placeholder="Search here" required>
+                    </form>
+                    <ul id="ghost-search-results" class="mb-0"></ul>
+                </div>
+              </div>
+          </div>
+      </div>      
+ </div>
+
+ 

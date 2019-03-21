@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{!-- Title --}}
+    <title>{{meta_title}}</title>
+    {{!--  Main CSS  --}}
+    <link rel="stylesheet" href="{{asset 'assets/css/vendor.min.css'}}">
+    {{!-- Google font --}}
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,600i,700" rel="stylesheet">
+    <script>
+        if(typeof site_content_key === "undefined"){
+           var site_content_key = 'b4967cf8169a57d3a57e7e1cfe';
+        }
+        if(typeof site_url === "undefined"){
+            var site_url = '{{@blog.url}}';
+        }
+        if(typeof mailchimp_url === "undefined"){
+            var mailchimp_url = 'https://themeix.us16.list-manage.com/subscribe/post?u=307862c135e4548eecf86f389&id=4784863884';
+        }
+    </script>
+    {{ghost_head}}
+</head>
+
+  <body class="home-dark {{ghost_body}}">
+    {{> "header"}}
+
+        {{{body}}}
+
+    {{> "footer"}}
+    <div class="preloader" id="preloader">
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <script src="{{asset 'assets/js/vendor.min.js'}}"></script>
+    <script src="https://unpkg.com/@tryghost/content-api@1.0.0/umd/content-api.min.js"></script>
+    {{!-- main  JS --}}
+    <script src="{{asset 'assets/js/app.js'}}"></script>
+    {{ghost_foot}}
+</body>
+</html>

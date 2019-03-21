@@ -1,0 +1,15 @@
+<div class="post-pagi-text d-flex">
+	<div class="col-4 pl-0 text-left">
+	{{#if prev}}
+	   <p><a href="{{page_url prev}}">{{t "Older Posts"}}</a></p>
+    {{/if}}
+    </div>
+    <div class="col-4 text-center">
+    	<p>{{t "Page {page} of {pages}" page=page pages=pages }}</p>
+    </div>
+    <div class="col-4 text-right pr-0">
+    {{#if next}}
+      <p><a href="{{page_url next}}">{{t "Newer Posts"}}</a></p>
+    {{/if}}
+    </div>
+</div>

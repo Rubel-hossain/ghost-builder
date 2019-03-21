@@ -1,0 +1,21 @@
+{
+  "delete": {
+    "dependencies": [
+      
+    ],
+    "vendorScss": [
+      
+    ]
+  },
+  "add": {
+    "dependencies": {
+     
+    },
+    "vendorJs": [
+     
+    ],
+    "vendorScss": [
+    
+    ]
+  }
+}

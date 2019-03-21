@@ -1,0 +1,25 @@
+<div class="post-details">
+{{#primary_tag}}
+<div class="post-meta">
+    <p><a href="{{url}}"><i class="fa fa-tag"></i> {{name}}</a> <span class="border-line"></span></p>
+</div>
+{{/primary_tag}}
+<div class="title">
+    <h2><a href="{{url}}">{{title}}</a></h2></div>
+<div class="post-centent">
+    {{excerpt words="30"}}
+</div>
+{{#primary_author}}
+<div class="post-author d-lg-flex justify-content-between ">
+    <div class="author-details  d-flex align-items-center">
+        {{#if profile_image}}
+         <div class="author"><img src="{{img_url profile_image}}" alt="{{name}}"/></div>
+        {{/if}}
+        <div class="author-des">
+            <p><a href="{{url}}">{{name}}</a><span>{{date published_at format=""}}</span></p>
+        </div>
+    </div>
+    <div class="btn-more"><a href="{{url}}">{{t "Read More"}}</a></div>
+</div>
+{{/primary_author}}
+</div>

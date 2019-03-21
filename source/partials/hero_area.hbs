@@ -1,0 +1,53 @@
+<div class="hero-area clearfix">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="carousel-block">
+                    <div class="hero-carousel owl-carousel">
+                       {{#get "posts" include="tags,authors" limit="8" filter="featured:true"}}
+                        {{#foreach posts}}
+                         <div class="single-post d-md-flex" data-dot="{{@number}}">
+                            <div class="post-details">
+                               {{#primary_tag}}
+                                <div class="post-meta">
+                                  <p><a href="{{name}}"><i class="fa fa-tag"></i> {{name}}</a> <span class="border-line"></span></p>
+                                </div>
+                                {{/primary_tag}}
+                                <div class="title">
+                                    <h2 class="wow fadeInDown animated" data-wow-delay="200ms" data-wow-duration="800ms" style=" animation-duration: 500ms; animation-delay: 200ms;"><a href="{{url}}">{{title}}</a></h2></div>
+                                <div class="post-centent">
+                                    <p>{{excerpt words="15"}}</p>
+                                </div>
+                                <div class="post-author d-lg-flex justify-content-between">
+                                   {{#primary_author}}
+                                    <div class="author-details  d-flex align-items-center">
+                                        {{#if profile_image}}
+                                        <div class="author"><img src="{{img_url profile_image}}" alt="{{name}}" /></div>
+                                        {{/if}}
+                                        <div class="author-des">
+                                            <p><a href="{{url}}">{{name}}</a><span>{{date published_at format="DD MMMM Y"}}</span></p>
+                                        </div>
+                                    </div>
+                                    {{/primary_author}}
+                                    <div class="btn-more"><a href="{{url}}">{{t "Read More"}}</a></div>
+                                </div>
+                             </div>
+                            <div class="post-thumb">
+                            <img class="post-card-image"
+                                srcset="{{img_url feature_image size="s"}} 300w,
+                                        {{img_url feature_image size="m"}} 600w,
+                                        {{img_url feature_image size="l"}} 1000w,
+                                        {{img_url feature_image size="xl"}} 2000w"
+                                sizes="(max-width: 1000px) 400px, 700px"
+                                src="{{img_url feature_image size="m"}}"
+                                alt="{{title}}"/>
+                            </div>
+                          </div>
+                        {{/foreach}}
+                     {{/get}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
